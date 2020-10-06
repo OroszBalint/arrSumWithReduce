@@ -3,7 +3,7 @@ function arrSum(arr: Array<any>): number{
     if(typeof i === 'number') {
       return sum + i
     }
-    if(typeof i === 'object') {
+    if(Array.isArray(i)) {
       return i.reduce(reducer, sum)
     }
     return sum
